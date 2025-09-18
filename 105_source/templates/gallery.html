@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .info {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .image-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .image-info {
+            padding: 10px;
+            background: #f8f9fa;
+        }
+        .image-name {
+            font-size: 14px;
+            color: #333;
+            word-break: break-all;
+        }
+        .no-images {
+            text-align: center;
+            color: #666;
+            font-size: 18px;
+            margin: 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🖼️ معرض الصور</h1>
+        
+        <div class="info">
+            📁 المصدر: {{ bucket_name }} | 📊 عدد الصور: {{ images|length }}
+        </div>
+
+        {% if images %}
+        <div class="gallery">
+            {% for image in images %}
+            <div class="image-card">
+                <img src="{{ image.url }}" alt="{{ image.name }}" loading="lazy">
+                <div class="image-info">
+                    <div class="image-name">{{ image.name }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="no-images">
+            📁 لا توجد صور في المجلد
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
