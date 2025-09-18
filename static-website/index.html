@@ -1,46 +1,201 @@
-<!-- قالب HTML جميل -->
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
-    <title>تطبيقي السحابي</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع شركة التقنية الحديثة</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-gradient-to-br from-blue-500 to-purple-600 min-h-screen">
-    <div class="container mx-auto p-8">
-        <div class="bg-white rounded-lg shadow-xl p-8 text-center">
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">
-                🎉 مرحباً بك في تطبيقي السحابي!
-            </h1>
-
-            <img src="https://cdn.dribbble.com/userupload/23045391/file/original-0b61e52f7f03758d1064f16651af8308.gif" alt="tesla" class="center">
-            
-            <p class="text-xl text-gray-400 mb-8">
-                هذا أول تطبيق ويب بنيته ونشرته على السحابة
-            </p>
-            <div class="grid grid-cols-3 gap-4 mt-8">
-                <div class="bg-blue-100 p-4 rounded">
-                    <h3 class="font-bold">🐍 Python</h3>
-                    <p>Flask Framework</p>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-rocket"></i>
+                    <span>شركة التقنية الحديثة</span>
                 </div>
-                <div class="bg-green-100 p-4 rounded">
-                    <h3 class="font-bold">🐳 Docker</h3>
-                    <p>محتوية</p>
-                </div>
-                <div class="bg-orange-100 p-4 rounded">
-                    <h3 class="font-bold">☁️ AWS</h3>
-                    <p>السحابة</p>
+                <ul class="nav-menu">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
-            <div class="mt-8">
-                <p class="text-gray-600">
-                    📅 {{ current_date if current_date else "اليوم" }}
-                </p>
-                <p class="text-sm text-gray-500 mt-2">
-                    تم بناؤه في دورة AWS للمطورين العرب
-                </p>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">نبني المستقبل بالتقنية</h1>
+            <p class="hero-subtitle">حلول تقنية متطورة لشركتك العصرية</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">اكتشف خدماتنا</a>
+                <a href="#contact" class="btn btn-secondary">تواصل معنا</a>
             </div>
         </div>
-    </div>
+        <div class="hero-image">
+            <i class="fas fa-laptop-code"></i>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>الحوسبة السحابية</h3>
+                    <p>حلول سحابية متطورة باستخدام AWS وAzure لضمان أداء موثوق وقابلية توسع عالية.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>تطبيقات الجوال</h3>
+                    <p>تطوير تطبيقات ذكية لأنظمة iOS وAndroid مع واجهات مستخدم عصرية وتجربة فريدة.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>تطوير المواقع</h3>
+                    <p>مواقع ويب حديثة وسريعة مع تصميم متجاوب وتحسين محركات البحث.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>الذكاء الاصطناعي</h3>
+                    <p>حلول ذكية مبنية على تقنيات التعلم الآلي لأتمتة العمليات وتحليل البيانات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>من نحن</h2>
+                    <p>شركة التقنية الحديثة هي شركة رائدة في مجال التكنولوجيا، نقدم حلولاً مبتكرة تساعد الشركات على النمو والازدهار في العصر الرقمي.</p>
+                    <p>مع فريق من الخبراء المتخصصين، نضمن تقديم أفضل الخدمات التقنية التي تلبي احتياجات عملائنا وتحقق أهدافهم.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>مشروع مكتمل</p>
+                        </div>
+                        <div class="stat">
+                            <h3>200+</h3>
+                            <p>عميل راضٍ</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>سنوات خبرة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <i class="fas fa-users"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>العنوان</h4>
+                            <p>الرياض، المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>الهاتف</h4>
+                            <p>+966 11 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>البريد الإلكتروني</h4>
+                            <p>info@techcompany.sa</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="الاسم" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="الرسالة" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>شركة التقنية الحديثة</h3>
+                    <p>نبني المستقبل بالتقنية</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="#">الحوسبة السحابية</a></li>
+                        <li><a href="#">تطبيقات الجوال</a></li>
+                        <li><a href="#">تطوير المواقع</a></li>
+                        <li><a href="#">الذكاء الاصطناعي</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 شركة التقنية الحديثة. جميع الحقوق محفوظة.</p>
+                <p class="hosted-info">🌐 مستضاف على Amazon S3 مع GitHub Actions</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
