@@ -1,0 +1,46 @@
+<!-- قالب HTML جميل -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تطبيقي السحابي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-500 to-purple-600 min-h-screen">
+    <div class="container mx-auto p-8">
+        <div class="bg-white rounded-lg shadow-xl p-8 text-center">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                🎉 مرحباً بك في تطبيقي السحابي!
+            </h1>
+
+            <img src="https://cdn.dribbble.com/userupload/23045391/file/original-0b61e52f7f03758d1064f16651af8308.gif" alt="tesla" class="center">
+            
+            <p class="text-xl text-gray-400 mb-8">
+                هذا أول تطبيق ويب بنيته ونشرته على السحابة
+            </p>
+            <div class="grid grid-cols-3 gap-4 mt-8">
+                <div class="bg-blue-100 p-4 rounded">
+                    <h3 class="font-bold">🐍 Python</h3>
+                    <p>Flask Framework</p>
+                </div>
+                <div class="bg-green-100 p-4 rounded">
+                    <h3 class="font-bold">🐳 Docker</h3>
+                    <p>محتوية</p>
+                </div>
+                <div class="bg-orange-100 p-4 rounded">
+                    <h3 class="font-bold">☁️ AWS</h3>
+                    <p>السحابة</p>
+                </div>
+            </div>
+            <div class="mt-8">
+                <p class="text-gray-600">
+                    📅 {{ current_date if current_date else "اليوم" }}
+                </p>
+                <p class="text-sm text-gray-500 mt-2">
+                    تم بناؤه في دورة AWS للمطورين العرب
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
